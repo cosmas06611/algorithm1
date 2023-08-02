@@ -1,0 +1,22 @@
+ALGORITHM SENTENCE_READER
+VAR
+    sentence : STRING;
+    sentenceLength:INTEGER := 0;
+    numberWord:INTEGER := 0;
+    numberVowel:INTEGER :=0;
+    currentChar:CHAR:='A', 'E', 'I', 'O', 'U';
+    BOOLEAN := true or false;
+
+BEGIN
+    index = 0;
+    WHILE sentence [index] is not point DO
+        IF sentence [index] is a space THEN
+            increment  numberWord by 1; IF word contains currentChar THEN
+                increment numberVowel by 1 & true;
+            ELSE
+                currentChar in word is consonant & false;
+            END_IF
+        END_IF
+    END_WHILE
+    write(length of sentence + numberWord + numberVowel);
+END
